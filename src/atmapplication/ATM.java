@@ -89,6 +89,8 @@ public class ATM {
         switch (choice){
             case 1:
                 ATM.showTransactionHistory(currentUser,scanner);
+                //Gobble up the rest of previous input line
+                scanner.nextLine();
                 break;
             case 2:
                 ATM.withdrawFunds(currentUser,scanner);
@@ -98,6 +100,8 @@ public class ATM {
                 break;
             case 4:
                 ATM.transferFunds(currentUser,scanner);
+                //Gobble up the rest of previous input line
+                scanner.nextLine();
                 break;
             default:
                 System.out.print("Incorrect entry. Please enter again");
@@ -146,7 +150,7 @@ public class ATM {
         //Get the account to transfer from
         do {
             System.out.printf("Enter the number (1-%d) of the account to transfer from: ",currentUser.numOfAccounts());
-            fromAcct = scanner.nextInt();
+            fromAcct = scanner.nextInt()-1;
             if (fromAcct<0 || fromAcct>=currentUser.numOfAccounts()){
                 System.out.printf("Invalid account. Please enter again");
             }
@@ -157,7 +161,7 @@ public class ATM {
         //Get account to transfer to
         do {
             System.out.printf("Enter the number (1-%d) of the account to transfer to: ", currentUser.numOfAccounts());
-            toAcct = scanner.nextInt();
+            toAcct = scanner.nextInt()-1;
             if (toAcct<0 || toAcct>currentUser.numOfAccounts()){
                 System.out.println("Invalid account. Please try again");
             }
@@ -175,10 +179,10 @@ public class ATM {
         }while (amount<0 || amount >accBalance);
 
         //Finally do the transfer
-        currentUser.addAccountTransaction(toAcct, -1*amount, String.format("Transfer to account %s",
-                currentUser.getAcctUUID(toAcct)));
-        currentUser.addAccountTransaction(fromAcct, amount, String.format("Transfer to account %s",
+        currentUser.addAccountTransaction(toAcct, amount, String.format("Credit transfer from account %s",
                 currentUser.getAcctUUID(fromAcct)));
+        currentUser.addAccountTransaction(fromAcct, -1*amount, String.format("Debit transfer to account %s",
+                currentUser.getAcctUUID(toAcct)));
     }
 
     /**
@@ -195,8 +199,8 @@ public class ATM {
 
         //Get the account to withdraw from
         do {
-            System.out.printf("Enter the number (1-%d) of the account to transfer from: ");
-            fromAcct = scanner.nextInt();
+            System.out.printf("Enter the number (1-%d) of the account to withdraw from: ", currentUser.numOfAccounts());
+            fromAcct = scanner.nextInt()-1;
             if (fromAcct<0 || fromAcct>=currentUser.numOfAccounts()){
                 System.out.println("Invalid account. Please enter again");
             }
@@ -211,7 +215,7 @@ public class ATM {
             if (amount<0){
                 System.out.println("Amount must not be less than zero");
             }else if (amount>accBalance){
-                System.out.printf("Amount must not be greater than the $%.02f account balance\n", accBalance);
+                System.out.printf("Amount must not be greater than account balance of $%.02f\n", accBalance);
             }
         }while (amount<0 || amount >accBalance);
 
@@ -219,7 +223,7 @@ public class ATM {
         scanner.nextLine();
 
         //Get the memo
-        System.out.println("Enter a memo: ");
+        System.out.print("Enter a memo: ");
         memo = scanner.nextLine();
 
         //Finally do the withdrawal
@@ -242,7 +246,7 @@ public class ATM {
         do {
             //TODO - 3 Check for the availability of the account in the bank list of accounts
             System.out.printf("Enter the number (1-%d) of the account to deposit to: ", currentUser.numOfAccounts());
-            toAcct = scanner.nextInt();
+            toAcct = scanner.nextInt()-1;
             if (toAcct<0 || toAcct> currentUser.numOfAccounts()){
                 System.out.println("Invalid account. Please enter again");
             }
@@ -265,7 +269,7 @@ public class ATM {
         scanner.nextLine();
 
         //Get the memo
-        System.out.println("Enter a memo: ");
+        System.out.print("Enter a memo: ");
         memo = scanner.nextLine();
 
         //Finally make the deposit
