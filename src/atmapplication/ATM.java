@@ -9,10 +9,10 @@ public class ATM {
         Scanner scanner = new Scanner(System.in);
 
         //initialize Bank
-        Bank theBank = new Bank("FirstBank Plc.");
+        Bank theBank = new Bank("Universal Bank Plc.");
 
         //Add a user which also creates a savings account
-        User nUser = theBank.addUser("Chioma","Akpota","1234");
+        User nUser = theBank.addUser("George","Orwell","1234");
 
         //Add a checking account for our user
         Account newAccount = new Account("Checking", nUser,theBank);
@@ -100,6 +100,10 @@ public class ATM {
                 break;
             case 4:
                 ATM.transferFunds(currentUser,scanner);
+                //Gobble up the rest of previous input line
+                scanner.nextLine();
+                break;
+            case 5:
                 //Gobble up the rest of previous input line
                 scanner.nextLine();
                 break;
@@ -245,7 +249,7 @@ public class ATM {
         //Get the account to deposit to
         do {
             //TODO - 3 Check for the availability of the account in the bank list of accounts
-            System.out.printf("Enter the number (1-%d) of the account to deposit to: ", currentUser.numOfAccounts());
+            System.out.printf("Enter the number (1-%d) of the account to deposit in: ", currentUser.numOfAccounts());
             toAcct = scanner.nextInt()-1;
             if (toAcct<0 || toAcct> currentUser.numOfAccounts()){
                 System.out.println("Invalid account. Please enter again");
@@ -256,14 +260,14 @@ public class ATM {
 
         //Get the amount to deposit
         do {
-            System.out.printf("Enter the amount to deposit in (min: $10): $");
+            System.out.printf("Enter the amount to deposit (min: $5): $");
             amount = scanner.nextDouble();
             if (amount<0){
                 System.out.println("Amount cannot be less than zero");
             } else if (amount<5){
                 System.out.println("Amount is too small. Please enter a minimum deposit amount of $5\n");
             }
-        }while (amount<0 || amount <10);
+        }while (amount<0 || amount <5);
 
         //Gobble up the rest of previous input line
         scanner.nextLine();
