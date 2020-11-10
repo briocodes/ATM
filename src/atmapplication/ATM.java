@@ -12,7 +12,7 @@ public class ATM {
         Bank theBank = new Bank("Universal Bank Plc.");
 
         //Add a user which also creates a savings account
-        User nUser = theBank.addUser("George","Orwell","1234");
+        User nUser = theBank.addUser("George","Orwell","1091");
 
         //Add a checking account for our user
         Account newAccount = new Account("Checking", nUser,theBank);
@@ -150,6 +150,7 @@ public class ATM {
         int toAcct;
         double amount;
         double accBalance;
+        String memo;
 
         //Get the account to transfer from
         do {
@@ -248,15 +249,13 @@ public class ATM {
 
         //Get the account to deposit to
         do {
-            //TODO - 3 Check for the availability of the account in the bank list of accounts
-
             System.out.printf("Enter the number (1-%d) of the account to deposit in: ", currentUser.numOfAccounts());
             toAcct = scanner.nextInt()-1;
             if (toAcct<0 || toAcct> currentUser.numOfAccounts()){
                 System.out.println("Invalid account. Please enter again");
             }
         }while (toAcct<0 || toAcct> currentUser.numOfAccounts());
-        //TODO -4 Check the account balance of our account before depositing to a foreign account
+
         accBalance = currentUser.getAcctBalance(toAcct);
 
         //Get the amount to deposit
