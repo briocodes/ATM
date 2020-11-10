@@ -4,6 +4,7 @@ package atmapplication;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class User {
     //The first name of the user
@@ -17,7 +18,6 @@ public class User {
     //The list of accounts for this user
     private ArrayList<Account> accounts;
 
-
     /**
      * Create a New User
      * @param firstName User's first name
@@ -26,6 +26,7 @@ public class User {
      * @param theBank The bank object the user is a customer of
      */
     public User(String firstName, String lastName, String pin, Bank theBank) {
+
         //Set the user's name
         this.firstName = firstName;
         this.lastName = lastName;
