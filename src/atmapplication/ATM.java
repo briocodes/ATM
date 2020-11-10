@@ -249,6 +249,7 @@ public class ATM {
         //Get the account to deposit to
         do {
             //TODO - 3 Check for the availability of the account in the bank list of accounts
+
             System.out.printf("Enter the number (1-%d) of the account to deposit in: ", currentUser.numOfAccounts());
             toAcct = scanner.nextInt()-1;
             if (toAcct<0 || toAcct> currentUser.numOfAccounts()){
