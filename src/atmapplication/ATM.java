@@ -71,11 +71,11 @@ public class ATM {
         //USERMENU
         do {
             System.out.printf("Welcome %s, What would you like to do?\n", currentUser.getFirstName());
-            System.out.println("    1. PRINT ACCOUNT TRANSACTION HISTORY");
-            System.out.println("    2. WITHDRAWAL");
-            System.out.println("    3. DEPOSIT");
-            System.out.println("    4. TRANSFER");
-            System.out.println("    5. QUIT");
+            System.out.println("    1) PRINT ACCOUNT TRANSACTION HISTORY");
+            System.out.println("    2) WITHDRAWAL");
+            System.out.println("    3) DEPOSIT");
+            System.out.println("    4) TRANSFER");
+            System.out.println("    5) QUIT");
             System.out.println();
             System.out.print("Enter Choice: ");
             choice = scanner.nextInt();
