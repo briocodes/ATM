@@ -1,5 +1,6 @@
 package atmapplication;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ATM {
@@ -87,18 +88,38 @@ public class ATM {
         //Process the choice
         switch (choice){
             case 1:
-                ATM.showTransactionHistory(currentUser,scanner);
+                try {
+                    ATM.showTransactionHistory(currentUser,scanner);
+                }catch (InputMismatchException e){
+                    System.out.println("Invalid Entry");
+                }
                 //Gobble up the rest of previous input line
                 scanner.nextLine();
                 break;
             case 2:
-                ATM.withdrawFunds(currentUser,scanner);
+                try {
+                    ATM.withdrawFunds(currentUser,scanner);
+                }catch (InputMismatchException e){
+                    System.out.println("Invalid Entry");
+                }
+                //Gobble up the rest of previous input line
+                scanner.nextLine();
                 break;
             case 3:
-                ATM.depositFunds(currentUser,scanner);
+                try {
+                    ATM.depositFunds(currentUser,scanner);
+                }catch (InputMismatchException e){
+                    System.out.println("Invalid Entry");
+                }
+                //Gobble up the rest of previous input line
+                scanner.nextLine();
                 break;
             case 4:
-                ATM.transferFunds(currentUser,scanner);
+                try {
+                    ATM.transferFunds(currentUser,scanner);
+                }catch (InputMismatchException e){
+                    System.out.println("Invalid Entry");
+                }
                 //Gobble up the rest of previous input line
                 scanner.nextLine();
                 break;
