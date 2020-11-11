@@ -91,7 +91,7 @@ public class ATM {
                 try {
                     ATM.showTransactionHistory(currentUser,scanner);
                 }catch (InputMismatchException e){
-                    System.out.println("Invalid Entry");
+                    System.out.println("Invalid Entry. Please enter 1-5");
                 }
                 //Gobble up the rest of previous input line
                 scanner.nextLine();
@@ -100,7 +100,7 @@ public class ATM {
                 try {
                     ATM.withdrawFunds(currentUser,scanner);
                 }catch (InputMismatchException e){
-                    System.out.println("Invalid Entry");
+                    System.out.println("Invalid Entry, Please enter 1-5");
                 }
                 //Gobble up the rest of previous input line
                 scanner.nextLine();
@@ -109,7 +109,7 @@ public class ATM {
                 try {
                     ATM.depositFunds(currentUser,scanner);
                 }catch (InputMismatchException e){
-                    System.out.println("Invalid Entry");
+                    System.out.println("Invalid Entry. Please enter 1-5");
                 }
                 //Gobble up the rest of previous input line
                 scanner.nextLine();
@@ -118,7 +118,7 @@ public class ATM {
                 try {
                     ATM.transferFunds(currentUser,scanner);
                 }catch (InputMismatchException e){
-                    System.out.println("Invalid Entry");
+                    System.out.println("Invalid Entry. Please enter 1-5");
                 }
                 //Gobble up the rest of previous input line
                 scanner.nextLine();
