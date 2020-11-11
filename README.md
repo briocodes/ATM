@@ -13,11 +13,11 @@ George's account summary
      1) 4798775206: $0.00: Savings
      2) 7182590567: $0.00: Checking
 Welcome George, What would you like to do?
-    1. PRINT ACCOUNT TRANSACTION HISTORY
-    2. WITHDRAWAL
-    3. DEPOSIT
-    4. TRANSFER
-    5. QUIT
+    1) PRINT ACCOUNT TRANSACTION HISTORY
+    2) WITHDRAWAL
+    3) DEPOSIT
+    4) TRANSFER
+    5) QUIT
 
 Enter Choice: 3
 Enter the number (1-2) of the account to deposit in: 1
@@ -32,11 +32,11 @@ George's account summary
      1) 4798775206: $45000.00: Savings
      2) 7182590567: $0.00: Checking
 Welcome George, What would you like to do?
-    1. PRINT ACCOUNT TRANSACTION HISTORY
-    2. WITHDRAWAL
-    3. DEPOSIT
-    4. TRANSFER
-    5. QUIT
+    1) PRINT ACCOUNT TRANSACTION HISTORY
+    2) WITHDRAWAL
+    3) DEPOSIT
+    4) TRANSFER
+    5) QUIT
 
 Enter Choice: 4
 Enter the number (1-2) of the account to transfer from: 1
@@ -51,11 +51,11 @@ George's account summary
      1) 4798775206: $11000.00: Savings
      2) 7182590567: $34000.00: Checking
 Welcome George, What would you like to do?
-    1. PRINT ACCOUNT TRANSACTION HISTORY
-    2. WITHDRAWAL
-    3. DEPOSIT
-    4. TRANSFER
-    5. QUIT
+    1) PRINT ACCOUNT TRANSACTION HISTORY
+    2) WITHDRAWAL
+    3) DEPOSIT
+    4) TRANSFER
+    5) QUIT
 
 Enter Choice: 2
 Enter the number (1-2) of the account to withdraw from: 2
@@ -70,11 +70,11 @@ George's account summary
      1) 4798775206: $11000.00: Savings
      2) 7182590567: $2000.00: Checking
 Welcome George, What would you like to do?
-    1. PRINT ACCOUNT TRANSACTION HISTORY
-    2. WITHDRAWAL
-    3. DEPOSIT
-    4. TRANSFER
-    5. QUIT
+    1) PRINT ACCOUNT TRANSACTION HISTORY
+    2) WITHDRAWAL
+    3) DEPOSIT
+    4) TRANSFER
+    5) QUIT
 
 Enter Choice: 2
 Enter the number (1-2) of the account to withdraw from: 1
@@ -89,11 +89,11 @@ George's account summary
      1) 4798775206: $10500.00: Savings
      2) 7182590567: $2000.00: Checking
 Welcome George, What would you like to do?
-    1. PRINT ACCOUNT TRANSACTION HISTORY
-    2. WITHDRAWAL
-    3. DEPOSIT
-    4. TRANSFER
-    5. QUIT
+    1) PRINT ACCOUNT TRANSACTION HISTORY
+    2) WITHDRAWAL
+    3) DEPOSIT
+    4) TRANSFER
+    5) QUIT
 
 Enter Choice: 1
 Enter the number (1-2) of the accounts whose transactions you want to see: 1
@@ -111,11 +111,11 @@ George's account summary
      1) 4798775206: $10500.00: Savings
      2) 7182590567: $2000.00: Checking
 Welcome George, What would you like to do?
-    1. PRINT ACCOUNT TRANSACTION HISTORY
-    2. WITHDRAWAL
-    3. DEPOSIT
-    4. TRANSFER
-    5. QUIT
+    1) PRINT ACCOUNT TRANSACTION HISTORY
+    2) WITHDRAWAL
+    3) DEPOSIT
+    4) TRANSFER
+    5) QUIT
 
 Enter Choice: 1
 Enter the number (1-2) of the accounts whose transactions you want to see: 2
@@ -132,11 +132,11 @@ George's account summary
      1) 4798775206: $10500.00: Savings
      2) 7182590567: $2000.00: Checking
 Welcome George, What would you like to do?
-    1. PRINT ACCOUNT TRANSACTION HISTORY
-    2. WITHDRAWAL
-    3. DEPOSIT
-    4. TRANSFER
-    5. QUIT
+    1) PRINT ACCOUNT TRANSACTION HISTORY
+    2) WITHDRAWAL
+    3) DEPOSIT
+    4) TRANSFER
+    5) QUIT
 
 Enter Choice: 5
 Thanks for banking with us, George.
