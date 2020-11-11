@@ -4,7 +4,6 @@ package atmapplication;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class User {
     //The first name of the user
