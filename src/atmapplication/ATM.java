@@ -12,7 +12,7 @@ public class ATM {
         Bank theBank = new Bank("Universal Bank Plc.");
 
         //Add a user which also creates a savings account
-        User nUser = theBank.addUser("George","Orwell","1091");
+        User nUser = theBank.addUser("George","Orwell","3019");
 
         //Add a checking account for our user
         Account newAccount = new Account("Checking", nUser,theBank);
@@ -27,7 +27,6 @@ public class ATM {
 
             //Stay in main menu until user quits
             ATM.printUserMenu(currentUser,scanner);
-
         }
     }
 
@@ -105,6 +104,7 @@ public class ATM {
                 break;
             case 5:
                 //Gobble up the rest of previous input line
+                System.out.println("Thanks for banking with us, " + currentUser.getFirstName()+".");
                 scanner.nextLine();
                 break;
             default:
@@ -115,7 +115,6 @@ public class ATM {
             }
 
         }
-
     }
 
     /**
@@ -176,12 +175,12 @@ public class ATM {
         do {
             System.out.printf("Enter the amount to transfer (max : $%.02f): $", accBalance);
             amount = scanner.nextInt();
-            if (amount<0){
-                System.out.println("Amount must not be less than zero");
+            if (amount<=0){
+                System.out.println("Amount cannot be less than or equal to zero");
             }else if (amount>accBalance){
                 System.out.printf("Amount must not be greater than the $%.02f account balance\n", accBalance);
             }
-        }while (amount<0 || amount >accBalance);
+        }while (amount<=0 || amount >accBalance);
 
         //Finally do the transfer
         currentUser.addAccountTransaction(toAcct, amount, String.format("Credit transfer from account %s",
@@ -217,12 +216,12 @@ public class ATM {
         do {
             System.out.printf("Enter the amount to withdraw (max : $%.02f): $", accBalance);
             amount = scanner.nextDouble();
-            if (amount<0){
-                System.out.println("Amount must not be less than zero");
+            if (amount<=0){
+                System.out.println("Amount cannot be less than or equal to zero");
             }else if (amount>accBalance){
                 System.out.printf("Amount must not be greater than account balance of $%.02f\n", accBalance);
             }
-        }while (amount<0 || amount >accBalance);
+        }while (amount<=0 || amount >accBalance);
 
         //Gobble up the rest of previous input line
         scanner.nextLine();
@@ -262,12 +261,12 @@ public class ATM {
         do {
             System.out.printf("Enter the amount to deposit (min: $5): $");
             amount = scanner.nextDouble();
-            if (amount<0){
-                System.out.println("Amount cannot be less than zero");
+            if (amount<=0){
+                System.out.println("Amount cannot be less than or equal to zero");
             } else if (amount<5){
                 System.out.println("Amount is too small. Please enter a minimum deposit amount of $5\n");
             }
-        }while (amount<0 || amount <5);
+        }while (amount<=0 || amount <5);
 
         //Gobble up the rest of previous input line
         scanner.nextLine();
@@ -279,5 +278,4 @@ public class ATM {
         //Finally make the deposit
         currentUser.addAccountTransaction(toAcct, amount, memo);
     }
-
 }
