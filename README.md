@@ -32,6 +32,8 @@ Enter the number (1-2) of the account to deposit in: 1
 Enter the amount to deposit (min: $5): $45000
 
 Enter a memo: Cash funding
+
+DEPOSIT SUCCESSFUL... Login to PROCEED
 ##
 
 Welcome to Universal Bank Plc. 
@@ -60,6 +62,8 @@ Enter the number (1-2) of the account to transfer from: 1
 Enter the number (1-2) of the account to transfer to: 2
 
 Enter the amount to transfer (max : $45000.00): $34000
+
+TRANSFER SUCCESSFUL... Login to PROCEED
 ##
 
 Welcome to Universal Bank Plc. 
@@ -88,6 +92,8 @@ Enter the number (1-2) of the account to withdraw from: 2
 Enter the amount to withdraw (max : $34000.00): $32000
 
 Enter a memo: Purchase of technical equipments
+
+WITHDRAWAL SUCCESSFUL... Login to PROCEED
 ##
 
 Welcome to Universal Bank Plc. 
@@ -116,6 +122,8 @@ Enter the number (1-2) of the account to withdraw from: 1
 Enter the amount to withdraw (max : $11000.00): $500
 
 Enter a memo: Utility bill
+
+WITHDRAWAL SUCCESSFUL... Login to PROCEED
 ##
 
 Welcome to Universal Bank Plc. 

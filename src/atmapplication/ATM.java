@@ -102,8 +102,6 @@ public class ATM {
                 }catch (InputMismatchException e){
                     System.out.println("Invalid Entry, Please enter 1-5");
                 }
-                //Gobble up the rest of previous input line
-                scanner.nextLine();
                 break;
             case 3:
                 try {
@@ -111,8 +109,6 @@ public class ATM {
                 }catch (InputMismatchException e){
                     System.out.println("Invalid Entry. Please enter 1-5");
                 }
-                //Gobble up the rest of previous input line
-                scanner.nextLine();
                 break;
             case 4:
                 try {
@@ -208,6 +204,7 @@ public class ATM {
                 currentUser.getAcctUUID(fromAcct)));
         currentUser.addAccountTransaction(fromAcct, -1*amount, String.format("Debit transfer to account %s",
                 currentUser.getAcctUUID(toAcct)));
+        System.out.println("TRANSFER SUCCESSFUL... Login to PROCEED");
     }
 
     /**
@@ -253,6 +250,7 @@ public class ATM {
 
         //Finally do the withdrawal
         currentUser.addAccountTransaction(fromAcct, -1*amount, memo);
+        System.out.println("WITHDRAWAL SUCCESSFUL... Login to PROCEED");
     }
 
     /**
@@ -298,5 +296,6 @@ public class ATM {
 
         //Finally make the deposit
         currentUser.addAccountTransaction(toAcct, amount, memo);
+        System.out.println("DEPOSIT SUCCESSFUL... Login to PROCEED");
     }
 }
