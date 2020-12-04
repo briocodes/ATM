@@ -1,5 +1,5 @@
 # ATM
-This, as the name implies, is a program that implements a bank ATM interface, and an online banking system with the possibilities of making 
+This, as the name implies, is a program that implements a bank ATM interface / online banking system with the possibilities of making 
 deposits, withdrawals, transfers between accounts, and checking the list of concluded transactions upon login.
 
 ### ATM-USER INTERACTION EXAMPLE ###
